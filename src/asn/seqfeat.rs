@@ -816,13 +816,13 @@ impl XmlNode for GeneticCodeOpt {
     fn from_reader(reader: &mut Reader<&[u8]>) -> Option<Self> where Self: Sized {
         // variant tags
         let id_tag = BytesStart::new("Genetic-code_E_id");
-        let name_tag = BytesStart::new("Genetic-code_E_name");
-        let ncbieaa_tag = BytesStart::new("Genetic-code_E_ncbieaa");
-        let ncbi8aa_tag = BytesStart::new("Genetic-code_E_ncbi8aa");
-        let ncbistdaa_tag = BytesStart::new("Genetic-code_E_ncbistdaa");
-        let sncbieaa_tag = BytesStart::new("Genetic-code_E_sncbieaa");
-        let sncbi8aa_tag = BytesStart::new("Genetic-code_E_sncbi8aa");
-        let sncbistdaa_tag = BytesStart::new("Genetic-code_E_sncbistdaa");
+        let _name_tag = BytesStart::new("Genetic-code_E_name");
+        let _ncbieaa_tag = BytesStart::new("Genetic-code_E_ncbieaa");
+        let _ncbi8aa_tag = BytesStart::new("Genetic-code_E_ncbi8aa");
+        let _ncbistdaa_tag = BytesStart::new("Genetic-code_E_ncbistdaa");
+        let _sncbieaa_tag = BytesStart::new("Genetic-code_E_sncbieaa");
+        let _sncbi8aa_tag = BytesStart::new("Genetic-code_E_sncbi8aa");
+        let _sncbistdaa_tag = BytesStart::new("Genetic-code_E_sncbistdaa");
 
         loop {
             match reader.read_event().unwrap() {

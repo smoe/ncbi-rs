@@ -112,7 +112,7 @@ impl XmlNode for EntrezGene {
             xtra_iq_elem,
             non_unique_keys_elem,
         ];
-        let unimplemented = UnexpectedTags(&unimplemented);
+        let _unimplemented = UnexpectedTags(&unimplemented);
 
         let mut buffer = Self::default();
 
@@ -406,6 +406,7 @@ impl XmlNode for GeneSource {
     }
 }
 
+#[allow(non_camel_case_types)]
 #[derive(Clone, PartialEq)]
 #[repr(u8)]
 pub enum GeneCommentaryType {
@@ -484,6 +485,7 @@ pub struct OtherSourceInner {
 pub type OtherSource = Vec<OtherSourceInner>;
 
 /// Units used in display-str to query map viewer
+#[allow(non_camel_case_types)]
 #[derive(Clone, PartialEq, Debug)]
 pub enum MapsMethodType {
     Cyto,

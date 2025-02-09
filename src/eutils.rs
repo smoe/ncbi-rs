@@ -192,7 +192,7 @@ mod tests {
             DataType::BioSeqSet(_) => (),
             _ => assert!(false),
         }
-        let data = get_local_xml("tests/data/tp73.genbank.xml");
+        let data = get_local_xml("tests/data/entrezgene.xml");
         let result = parse_xml(data.as_str());
         println!("Parse result: {:?}", result);
         match result {

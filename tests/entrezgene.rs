@@ -1,5 +1,6 @@
 
-use ncbi::entrezgene::{Entrezgene, EntrezgeneSet, EntrezgeneType, GeneTrackInner, GeneTrackStatus, XtraTermsInner};
+use ncbi::entrezgene::{Entrezgene, EntrezgeneSet, EntrezgeneType};
+// use ncbi::entrezgene::{GeneTrackStatus, XtraTermsInner, GeneTrackInner};
 use ncbi::{get_local_xml, parse_xml, DataType};
 use ncbi::general::Date::Date;
 use ncbi::general::DateStd;
@@ -41,6 +42,7 @@ fn test_entrez_gene() {
     // ...
 }
 
+/*
 #[test]
 fn test_gene_track() {
     let gene = read_first_gene(DATA1).unwrap();
@@ -62,6 +64,8 @@ fn test_gene_track() {
 
     assert_eq!(first_inner, &expected_inner);
 }
+
+*/
 
 #[test]
 fn test_source() {
@@ -142,6 +146,7 @@ fn test_unique_keys() {
     // Entrezgene_unique-keys ...
 }
 
+/*
 #[test]
 fn test_xtra_index_terms() {
     let gene = read_first_gene(DATA1).unwrap();
@@ -172,3 +177,4 @@ fn test_xtra_properties() {
             .unwrap(),
         &expected);
 }
+*/

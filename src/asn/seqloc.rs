@@ -238,7 +238,8 @@ impl XmlNode for SeqLoc {
         let packed_int_variant = BytesStart::new("Seq-loc_packed-int");
         let pnt_variant = BytesStart::new("Seq-loc_pnt");
         let packed_pnt_variant = BytesStart::new("Seq-loc_packed_pnt");
-        let mix_variant = BytesStart::new("Seq-loc_mix");
+        let mix_variant_underscore = BytesStart::new("Seq-loc_mix");
+        let mix_variant_dash = BytesStart::new("Seq-loc-mix");
         let equiv_variant = BytesStart::new("Seq-loc_equiv");
         let bond_variant = BytesStart::new("Seq-loc_bond");
         let feat_variant = BytesStart::new("Seq-loc_feat");
@@ -249,7 +250,8 @@ impl XmlNode for SeqLoc {
             packed_int_variant,
             pnt_variant,
             packed_pnt_variant,
-            mix_variant,
+            mix_variant_dash,
+            mix_variant_underscore,
             equiv_variant,
             bond_variant,
             feat_variant

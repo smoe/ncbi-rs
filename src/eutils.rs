@@ -158,8 +158,10 @@ pub fn parse_xml(response: &str) -> Result<DataType, String> {
 }
 
 pub fn get_local_xml(path: &str) -> String {
-    let file = fs::read(path);
-    return file.unwrap().escape_ascii().to_string();
+    match fs::read(path) {
+        Ok(file) => file.escape_ascii().to_string(),
+        Err(e) => panic!("Failed to read file '{}': {}", path, e),
+    }
 }
 
 pub fn fetch_data(db: EntrezDb, id: &str, r#type: &str, mode: &str) -> DataType {
